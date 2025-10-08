@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e7e7;
+    font-family:  Arial;
+}
+
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height : 180px;
+    width: 360px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+#number {
+    font-size: 70px;
+    font-weight: 500;
+}
+
+#decrease, #increase {
+    background-color: rgb(222, 222, 222);
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    /* text-align: center; */
+    border-radius: 50%;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black
+    
+}
