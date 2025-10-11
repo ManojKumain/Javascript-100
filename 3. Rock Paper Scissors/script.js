@@ -75,9 +75,57 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
+
+
+// Step 5: Write the logic to play a single round
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie! No one wins");
+    } else if (humanChoice === "rock" && computerChoice === "paper") {
+        console.log(`You lose! Paper beats rock`);
+        computerScore++;
+    }
+    else if (humanChoice === "rock" && computerChoice === "scissors") {
+        console.log(`You win! rock beats scissors`);
+        humanScore++;
+    }
+    else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++
+    }
+    else if (humanChoice === "paper" && computerChoice === "scissors") {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+    }
+    else if (humanChoice === "scissors" && computerChoice === "rock") {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+    }
+    else if (humanChoice === "scissors" && computerChoice === "paper") {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++
+    }
+
+}
+
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+// playRound(humanSelection, computerSelection)
 
 
+// Step 6: Write the logic to play the entire game
+function playGame() {
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    console.log(`Your score is: ${humanScore}`);
+    console.log(`Computer score is: ${computerScore}`);
+}
 
+playGame();
