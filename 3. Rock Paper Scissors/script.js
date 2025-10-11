@@ -27,4 +27,12 @@ function getComputerChoice() {
 
 }
 
+// Step 3: Write the logic to get the human choice
+
+function getHumanChoice() {
+    const humanChoice = prompt("Enter Your Choice").toLowerCase()
+    return humanChoice;
+}
+
+
 
